@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VS&I Premium Employee ID Card</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar no-print">
+    <div class="brand">
+        <img src="assets/company-logo.png" alt="VS&I Logo">
+        <div>
+            <h1>VS&I EMPLOYEE ID CARD</h1>
+            <p>VARANASI SOFTWARES AND INNOVATIONS PVT LTD • MIRZAPUR</p>
+        </div>
+    </div>
+    <div class="actions">
+        <button class="btn btn-dark" id="resetBtn">Reset</button>
+        <button class="btn btn-orange" id="printBtn">PRINT A4</button>
+    </div>
+</header>
+
+<main class="workspace no-print">
+
+    <aside class="editor">
+        <div class="editor-head">
+            <span class="step">01</span>
+            <div>
+                <h2>Employee Details</h2>
+                <p>Fill details and see live preview</p>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Employee Name</label>
+            <input id="name" value="SHIVAM KUMAR" maxlength="28">
+        </div>
+        <div class="two-col">
+            <div class="field">
+                <label>Employee ID</label>
+                <input id="empId" value="VSI-001">
+            </div>
+            <div class="field">
+                <label>Blood Group</label>
+                <input id="blood" value="O+">
+            </div>
+        </div>
+        <div class="field">
+            <label>Designation</label>
+            <input id="designation" value="SOFTWARE ENGINEER">
+        </div>
+        <div class="field">
+            <label>Department</label>
+            <input id="department" value="IT & SOFTWARE">
+        </div>
+        <div class="field">
+            <label>Mobile Number</label>
+            <input id="mobile" value="+91 98765 43210">
+        </div>
+        <div class="two-col">
+            <div class="field">
+                <label>Date of Joining</label>
+                <input id="joining" value="01-08-2026">
+            </div>
+            <div class="field">
+                <label>Valid Upto</label>
+                <input id="valid" value="31-07-2027">
+            </div>
+        </div>
+
+        <div class="upload-box">
+            <label>Employee Photo</label>
+            <input id="photo" type="file" accept="image/*">
+            <small>Passport-size photo recommended</small>
+        </div>
+
+        <div class="upload-box">
+            <label>Company Logo</label>
+            <input id="logo" type="file" accept="image/*">
+            <small>Default VS&I logo is already loaded</small>
+        </div>
+
+        <div class="print-note">
+            <strong>PRINT SIZE</strong>
+            <span>85 × 54 mm • Landscape • A4 Sheet</span>
+        </div>
+    </aside>
+
+    <section class="preview">
+        <div class="print-tip no-print"><strong>PRINT TIP:</strong> In Chrome Print, set <b>Colour → Colour</b>, <b>Scale → 100%</b>, and enable <b>Background graphics</b>.</div>
+        <div class="preview-top">
+            <div>
+                <span class="eyebrow">LIVE PREVIEW</span>
+                <h2>Premium ID Card</h2>
+            </div>
+            <span class="size-pill">85 × 54 MM</span>
+        </div>
+
+        <div class="cards">
+            <!-- FRONT -->
+            <article class="id-card front" id="frontCard">
+                <div class="front-glow"></div>
+                <div class="top-band"></div>
+
+                <div class="card-header">
+                    <div class="logo-ring">
+                        <img id="logoFront" src="assets/company-logo.png" alt="">
+                    </div>
+                    <div class="header-company">
+                        <div class="company-name">VARANASI SOFTWARES</div>
+                        <div class="company-name">AND INNOVATIONS PVT LTD</div>
+                        <div class="city">MIRZAPUR • UTTAR PRADESH</div>
+                    </div>
+                    <div class="mini-mark">VS&I</div>
+                </div>
+
+                <div class="front-main">
+                    <div class="photo-frame">
+                        <img id="photoFront" alt="Employee Photo">
+                        <div id="photoText">PHOTO</div>
+                        <span class="verified">✓</span>
+                    </div>
+
+                    <div class="person">
+                        <div class="role-label">AUTHORIZED EMPLOYEE</div>
+                        <h3 id="pName">SHIVAM KUMAR</h3>
+                        <div class="designation" id="pDesignation">SOFTWARE ENGINEER</div>
+
+                        <div class="details">
+                            <div><span>EMPLOYEE ID</span><b id="pId">VSI-001</b></div>
+                            <div><span>DEPARTMENT</span><b id="pDepartment">IT & SOFTWARE</b></div>
+                            <div><span>MOBILE</span><b id="pMobile">+91 98765 43210</b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-ribbon">
+                    <span>CODING IDEAS • CREATING FUTURE</span>
+                    <span>VALID ID</span>
+                </div>
+            </article>
+
+            <!-- BACK -->
+            <article class="id-card back" id="backCard">
+                <div class="back-top">
+                    <div class="back-logo">
+                        <img id="logoBack" src="assets/company-logo.png" alt="">
+                    </div>
+                    <div>
+                        <div class="back-title">VARANASI SOFTWARES</div>
+                        <div class="back-title">AND INNOVATIONS PVT LTD</div>
+                        <small>MIRZAPUR • UTTAR PRADESH</small>
+                    </div>
+                </div>
+
+                <div class="back-body">
+                    <div class="valid-box">
+                        <span>EMPLOYEE ID</span>
+                        <strong id="bId">VSI-001</strong>
+                    </div>
+                    <div class="valid-box blood-box">
+                        <span>BLOOD GROUP</span>
+                        <strong id="bBlood">O+</strong>
+                    </div>
+
+                    <div class="dates">
+                        <div><span>DATE OF JOINING</span><b id="bJoining">01-08-2026</b></div>
+                        <div><span>VALID UPTO</span><b id="bValid">31-07-2027</b></div>
+                    </div>
+
+                    <p class="policy">This identity card is the property of Varanasi Softwares and Innovations Pvt Ltd. If found, please return it to the company office.</p>
+
+                    <div class="contact">
+                        <div><span>CONTACT</span><b id="bMobile">+91 98765 43210</b></div>
+                        <div><span>LOCATION</span><b>MIRZAPUR, U.P.</b></div>
+                    </div>
+
+                    <div class="barcode" id="barcode"></div>
+                    <div class="barcode-text" id="barcodeText">VSI-001</div>
+
+                    <div class="signatures">
+                        <div><i></i><span>EMPLOYEE SIGNATURE</span></div>
+                        <div><i></i><span>AUTHORIZED SIGNATORY</span></div>
+                    </div>
+                </div>
+
+                <div class="back-footer">www.vsi • OFFICIAL EMPLOYEE IDENTIFICATION</div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<!-- Hidden A4 print sheet -->
+<section class="print-sheet" id="printSheet">
+    <div class="print-title">VARANASI SOFTWARES AND INNOVATIONS PVT LTD</div>
+    <div class="print-subtitle">EMPLOYEE ID CARD • 85 × 54 MM</div>
+    <div class="print-grid">
+        <div id="printFront"></div>
+        <div id="printBack"></div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
